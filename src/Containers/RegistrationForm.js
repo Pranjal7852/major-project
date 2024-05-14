@@ -86,7 +86,7 @@ class Register extends Component {
     ipfs.files.add(buf, (error, result) => {
       console.log("Ipfs result", result);
       if (error) {
-        console.error(error);
+        console.error("this is error",error);
         return;
       }
       this.state.landList.methods

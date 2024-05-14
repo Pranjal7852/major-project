@@ -126,15 +126,15 @@ class table extends Component {
       number,
     };
     console.log(data);
-    await axios
-      .post("http://localhost:3001/send_mail", data)
-      .then((response) => {
-        if (response.status == 200) {
-          alert("Message Sent.");
-        } else {
-          alert("Message failed to send.");
-        }
-      });
+    // await axios
+    //   .post("http://localhost:3001/send_mail", data)
+    //   .then((response) => {
+    //     if (response.status == 200) {
+    //       alert("Message Sent.");
+    //     } else {
+    //       alert("Message failed to send.");
+    //     }
+    //   });
     this.setState({ flag });
     if (flag) window.location.reload();
   };
