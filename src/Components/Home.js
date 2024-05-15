@@ -9,8 +9,9 @@ export default class Home extends Component {
     return (
       <div className="bg">
         <div className="home-text">
+          LandLink: Decentralised
+          <br />
           Land Registry
-          <br /> Application
           <div className="typewriter">
             {/* Trustable, Transparent and Digitized Platform
             <br />
@@ -20,6 +21,7 @@ export default class Home extends Component {
               multiText={[
                 "Trustable, Transparent and Digitized Platform",
                 "Open for all! Register Now.",
+                "System using Blockchain",
               ]}
             />
           </div>
@@ -39,7 +41,7 @@ export default class Home extends Component {
             Register
           </button>{" "}
           <button onClick={() => this.props.history.push("/login")}>
-            Login
+            Old User Login
           </button>
         </div>
       </div>
