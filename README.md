@@ -118,8 +118,8 @@ The whole process is conducted in the form of the smart contract, which ensures 
 
 - [<img src="https://avatars.githubusercontent.com/Pranjal7852" width="50" style="border-radius:50%">](https://github.com/Pranjal7852) [@Pranjal7852](https://github.com/Pranjal7852)
 - [<img src="https://avatars.githubusercontent.com/arajshow" width="50" style="border-radius:50%">](https://github.com/arajshow) [@arajshow](https://github.com/arajshow)
+- [<img src="https://avatars.githubusercontent.com/20bec009yash" width="50" style="border-radius:50%">](https://github.com/20bec009yash) [@20bec009yash](https://github.com/20bec009yash)
 - Garv Agarwal
-- Yash Mittal
 
 
 
