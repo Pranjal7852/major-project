@@ -9,6 +9,9 @@ import Land from "../abis/LandRegistry.json";
 import ipfs from "../ipfs";
 import axios from "axios";
 
+import { create as ipfsHttpClient } from "ipfs-http-client";
+import { Buffer } from "buffer";
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -39,11 +42,12 @@ class Register extends Component {
   componentDidMount = async () => {
     const walletAddress = "0xa5B3f12e4eED40717D4413025B8c7CC995ba4a1f";
 
+ 
+
     const web3 = window.web3;
     const acc = await window.localStorage.getItem("web3account");
     this.setState({ account: acc });
     // console.log(acc)
-    const networkId = await web3.eth.net.getId();
 
     if (true) {
       const landList = new web3.eth.Contract(Land, walletAddress);
@@ -81,44 +85,56 @@ class Register extends Component {
     console.log(propertyId);
   }
 
+
   async Register(data, account, laddress, lamount) {
-    var buf = Buffer.from(JSON.stringify(data));
-    ipfs.files.add(buf, (error, result) => {
-      console.log("Ipfs result", result);
-      if (error) {
-        console.error("this is error",error);
-        return;
-      }
+    try {
+      // Upload JSON data to IPFS
+      const formData = new FormData();
+      formData.append('file', new Blob([JSON.stringify(data)], { type: 'application/json' }));
+  
+      const response = await axios.post('https://api.pinata.cloud/pinning/pinFileToIPFS', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'pinata_api_key': 'd2f21938c99d34d106be',
+          'pinata_secret_api_key': '06c3efb5358411001adc2d3c9dd4655aad47f9a29d206a29d7ca6cf2a595a891',
+        },
+      });
+  
+      const ipfsHash = `https://gateway.pinata.cloud/ipfs/${response.data.IpfsHash}`;
+      console.log('IPFS result', ipfsHash);
+  
       this.state.landList.methods
         .Registration(
           account,
-          result[0].hash,
+          ipfsHash,
           laddress,
           lamount,
           this.state.propertyId,
-          "Not Approved",
-          "Not yet approved by the govt."
+          'Not Approved',
+          'Not yet approved by the govt.'
         )
         .send({
           from: this.state.account,
           gas: 1000000,
         })
-        .on("receipt", function (receipt) {
+        .on('receipt', function (receipt) {
           console.log(receipt);
           if (!receipt) {
-            console.log("Transaction Failed!!!");
+            console.log('Transaction Failed!!!');
           } else {
-            console.log("Transaction succesful");
-            window.alert("Transaction succesful");
+            console.log('Transaction successful');
+            window.alert('Transaction successful');
             console.log(data);
-            window.location = "/dashboard";
+            window.location = '/dashboard';
           }
         });
-      this.setState({ ipfsHash: result[0].hash });
-    });
-
-    // console.log(transaction)
+  
+      this.setState({ ipfsHash });
+    } catch (error) {
+      console.error('IPFS error:', error);
+    }
   }
+
   handleSubmit = () => {
     const account = this.state.account;
     const laddress = this.state.laddress;
