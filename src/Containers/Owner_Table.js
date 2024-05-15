@@ -102,8 +102,6 @@ class table extends Component {
     const accounts = await web3.eth.getAccounts();
     await window.localStorage.setItem("web3account", accounts[0]);
     this.setState({ account: accounts[0] });
-    const networkId = await web3.eth.net.getId();
-    const LandData = Land.networks[networkId];
     if (true) {
       const landList = new web3.eth.Contract(Land, walletAddress);
       this.setState({ landList });
@@ -151,15 +149,15 @@ class table extends Component {
     };
 
     console.log(data);
-    await axios
-      .post("http://localhost:3001/send_mail", data)
-      .then((response) => {
-        if (response.status == 200) {
-          alert("Message Sent.");
-        } else {
-          alert("Message failed to send.");
-        }
-      });
+    // await axios
+    //   .post("http://localhost:3001/send_mail", data)
+    //   .then((response) => {
+    //     if (response.status == 200) {
+    //       alert("Message Sent.");
+    //     } else {
+    //       alert("Message failed to send.");
+    //     }
+    //   });
     window.location.reload();
   };
   handleRequesterInfo = async (address) => {
