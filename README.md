@@ -1,11 +1,29 @@
-
 # Land Registry Application using Ethereum Blockchain
 
-![](https://github.com/1209simran/Land-Registry-Application/blob/master/src/images/home.png?raw=true)
+<h2 align="center">Home Page</h2>
+<p align="center">
+  <img src="https://github.com/arajshow/major-project/blob/dev/src/images/readME-images/home-page.jpeg?raw=true" alt="Home Page" />
+</p>
+
+## Other Pages
+
+| Registration Page | User Profile |
+| --- | --- |
+| <p align="center"><img src="https://github.com/arajshow/major-project/blob/dev/src/images/readME-images/registration-page.jpeg?raw=true" alt="Registration Page"/></p> | <p align="center"><img src="https://github.com/arajshow/major-project/blob/dev/src/images/readME-images/profile-section.jpeg?raw=true" alt="User Profile" /></p> |
+
+| Ganache Dashboard Showing Land Contracts | User Wallet |
+| --- | --- |
+| <p align="center"><img src="https://github.com/arajshow/major-project/blob/dev/src/images/readME-images/Ganache-dashboard.jpeg?raw=true" alt="Ganache Dashboard" /></p> | <p align="center"><img src="https://github.com/arajshow/major-project/blob/dev/src/images/readME-images/user-wallet.jpeg?raw=true" alt="User Wallet" /></p> |
+
 
 ## Abstract
 
-Developed a decentralized application using Blockchain which could overcome the short-comings of the existing process of land registry. Through Blockchain, it is possible to keep track of how property changes hand to hand. For buyers, sellers and Government registrars, it is easier to transfer the land ownership from a seller to a new buyer without any intermediaries.  It provides immutability, auditability, traceability, and anonymity features which attracts the people around the globe to implement its decentralization feature in the land registry process.  It also accelerates the process of registration and provides transparency to the system.
+In the present time, when the cases of fraud documents and con activities are rapidly increasing because of the lengthy and difficult documentation procedure of this conventional technique, the traditional land registration system fails to deliver the sense of security and confidence to its users i.e. the Public. To overcome this chain of fraudry, there was a need for a secure, easy to use yet feasible technology to be brought into use. This is when Blockchain Technology, the maester of new generation internet based services comes into play.
+
+Blockchain technology is a technique that uses a principle of distributing the transactions that are recorded over it into a wide network of computers. This technology makes it possible for the information to be prevented from being manipulated, corrupted and altered. The use of blockchain technology to build a decentralised, trustworthy, and transparent land registration system is the solution put out to address these problems. Land record security and accuracy can be improved by using the blockchain paradigm, which provides an immutable, decentralised public ledger. Eliminating intermediaries allows the blockchain land registry platform to expedite property ownership certification, lower fees, and shorten the land registration process. 
+
+This report revolves around the main goal to investigate how blockchain technology may be used for land registration. Specifically, it will look at how blockchain technology might be used to maintain land ownership records, stop fraud, and make ownership transfers easier by using smart contracts and cryptographic methods. The security, transparency, and efficiency issues that traditional land registration systems confront will become the reason for updating in the system with the blockchain technology as its implementation might help with these issues by offering a transparent and safe land registration system.
+
 
 ## Technologies Used
 
@@ -95,5 +113,11 @@ Once the request is approved, the buyer can now buy the property. If approved, t
 
 The whole process is conducted in the form of the smart contract, which ensures that the process is immutable, secured and digitized. No one in between can tamper the data, and authenticity is maintained throughout the process. There is no human error involved. Paperwork will be reduced, and most importantly, everything will become transparent. Chances of fraud cases will get reduced. The public ledger can be used in case there is any doubt regarding the land ownership claim. The documents are digitally signed, which leads to the transfer of land title upon payment in cryptocurrency.
 
+## Contributors
 
-**In case of any query, please feel free to contact me.**
+
+- [<img src="https://avatars.githubusercontent.com/Pranjal7852" width="50" style="border-radius:50%">](https://github.com/Pranjal7852) [@Pranjal7852](https://github.com/Pranjal7852)
+- [<img src="https://avatars.githubusercontent.com/arajshow" width="50" style="border-radius:50%">](https://github.com/arajshow) [@arajshow](https://github.com/arajshow)
+
+
+
